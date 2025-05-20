@@ -16,7 +16,7 @@ const BlueSkyBanner = () => {
 
       {/* Centered Text */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="text-white md:text-4xl text-3xl font-bold uppercase tracking-wider">
+        <h1 className="text-white md:text-4xl text-3xl font-bold uppercase text-center">
           Blue Skey Condominium
         </h1>
       </div>
