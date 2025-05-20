@@ -2,10 +2,24 @@ import Image from "next/image";
 import React from "react";
 import floor from "../../../../../public/images/condominium/floor1.jpg";
 import floor_digine from "../../../../../public/images/condominium/floor1_digine.jpg";
+import banner from "../../../../../public/images/land3.jpg";
 const FloorPlan = () => {
   return (
     <div>
-      <h1 className="text-5xl text-center underline">Floor Plan</h1>
+      <div className="relative w-full md:h-[500px] h-40">
+        <Image
+          src={banner}
+          alt="Blue Sky City"
+          fill
+          className="object-cover brightness-50"
+          priority
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-white md:text-4xl text-3xl font-bold uppercase tracking-wider">
+            Floor Plan
+          </h1>
+        </div>
+      </div>{" "}
       <section className="grid md:grid-cols-2 grid-cols-1  items-start justify-between max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-16 py-12 gap-20">
         {/* Left Side - Image */}
         <div className="w-full">
