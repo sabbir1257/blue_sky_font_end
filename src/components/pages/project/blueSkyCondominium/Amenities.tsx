@@ -1,15 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import banner from "../../../../../public/images/land3.jpg";
-import resortStyle from "../../../../../public/images/condominium/Amenities1.jpg";
-import Amenities1 from "../../../../../public/images/condominium/Amenities.jpg";
-import Amenities2 from "../../../../../public/images/condominium/Amenities2.jpg";
-import Amenities3 from "../../../../../public/images/condominium/Amenities3.jpg";
-import parking from "../../../../../public/images/condominium/parking.jpg";
-import card1 from "../../../../../public/images/condominium/card1.jpg";
-import card2 from "../../../../../public/images/condominium/card2.jpg";
-import card3 from "../../../../../public/images/condominium/card3.jpg";
-import live from "../../../../../public/images/condominium/Live.jpg";
+import resortStyle from "../../../../../public/images/condominium/first1.jpg";
+import Amenities1 from "../../../../../public/images/condominium/Second.jpg";
+import Amenities2 from "../../../../../public/images/condominium/Amenities33.jpg";
+import Amenities3 from "../../../../../public/images/condominium/gym.jpg";
+import parking from "../../../../../public/images/condominium/parking1.jpg";
+import card1 from "../../../../../public/images/condominium/card11.jpg";
+import card2 from "../../../../../public/images/condominium/card22.jpg";
+import card3 from "../../../../../public/images/condominium/caed33.jpg";
+import live from "../../../../../public/images/condominium/live1.jpg";
 import GymFeatures from "./GymFeatures";
 
 const Amenities = () => {
@@ -24,7 +24,7 @@ const Amenities = () => {
           priority
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white md:text-4xl text-3xl font-bold uppercase tracking-wider">
+          <h1 className="text-white md:text-4xl text-3xl font-bold  tracking-wider uppercase">
             Amenities
           </h1>
         </div>
@@ -93,8 +93,8 @@ const Amenities = () => {
       <Image src={Amenities3} alt="Amenities" className="w-full h-auto" />
       <GymFeatures />
       <Image src={parking} alt="Parking" className="w-full h-auto" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:items-center md:justify-items-center px-4 py-12">
-        <h1 className="col-span-full text-3xl font-semibold">Parking</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6 md:items-center md:justify-items-center px-4 py-12">
+        <h1 className="col-span-2 text-3xl font-semibold">Parking</h1>
         <p>
           4 Basement <br /> Parking Facilities
         </p>
@@ -110,8 +110,6 @@ const Amenities = () => {
           <br /> vehicle-free for the entire community
         </p>
       </div>
-
-      {/* A La Carte Service Section */}
       <div className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-60 py-12">
         <h1 className="text-4xl font-semibold mb-4">A La Carte Service</h1>
         <p className="mb-8">
