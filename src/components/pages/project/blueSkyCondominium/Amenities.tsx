@@ -12,6 +12,7 @@ import card3 from "../../../../../public/images/condominium/caed33.jpg";
 import live from "../../../../../public/images/condominium/live1.jpg";
 import GymFeatures from "./GymFeatures";
 
+
 const Amenities = () => {
   return (
     <section className="overflow-hidden">
