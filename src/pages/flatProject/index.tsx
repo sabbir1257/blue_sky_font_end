@@ -1,14 +1,7 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from 'framer-motion';
 import FlowUsSection from '@/components/shared/followUs/FollowUs';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-
-import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
+import banner from "../../../public/images/land3.jpg";
 import Image from 'next/image';
 
 const towerData = [
@@ -68,49 +61,19 @@ const slidesData = [
 const SwiperComponent = () => {
   return (
     <div className='w-[1200px] mx-auto'>
-
-      <div className=' h-[80vh] bg-[#1e232e] flex justify-center items-center'>
-        <Swiper
-          initialSlide={3}
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={5}
-          loop={true}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-            slideShadows: true,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination, Autoplay]}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false
-          }}
-        >
-          {slidesData.map((slide) => (
-            <SwiperSlide key={slide.id}>
-              <div className='w-[400px] h-[500px] bg-[#1b1f2a] border-4 border-[rgba(255,255,255.1)] border-t-[#0099ff] border-b-[#0099ff] rounded-2xl'>
-                <Image
-                  width={500}
-                  height={500}
-                  alt={slide.title}
-                  src={slide.image}
-                  className='w-full h-[350px] rounded-xl object-cover'
-                />
-                <div className='text-white text-center px-4'>
-                  <h1 className='text-2xl mb-2'>{slide.title}</h1>
-                  <p className='text-sm mb-4'>{slide.description}</p>
-                  <button className='py-2 px-6 rounded-lg text-white bg-purple-700'>Contact Us</button>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
+        <div className="relative w-full md:h-[500px] h-40">
+        <Image
+          src={banner}
+          alt="Blue Sky City"
+          fill
+          className="object-cover brightness-50"
+          priority
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-white md:text-4xl text-3xl font-bold  tracking-wider uppercase">
+            Blue Sky Flat Project
+          </h1>
+        </div>
       </div>
       {/* Tower Section  */}
       <section className="py-20 bg-gradient-to-b from-gray-100 to-white">
