@@ -170,34 +170,7 @@ const ChairmanMessage = () => {
           <p>Thank you for being an integral part of our journey.</p>
           <p>Warm regards,</p>
         </div>
-      </div>
-      {/* tast */}
-      <section className="bg-white max-w-[1200px] h-screen mx-auto flex items-center p-8 rounded-md shadow-md">
-        {/* Image on left */}
-        <div className="flex-shrink-0">
-          <img
-            src="/images/man2.jpg"
-            alt="Md Miraz Hossain Ovi"
-            className="w-72 h-72  object-cover shadow-lg" // Extra Large size
-          />
-        </div>
-
-        {/* Text content on right */}
-        <div className="ml-12 max-w-xl">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-3">
-            Md Miraz Hossain Ovi
-          </h1>
-          <h3 className="text-2xl text-blue-800 font-semibold mb-6">
-            Managing Director
-          </h3>
-          <p className="text-gray-700 text-lg leading-relaxed">
-            Welcome to the about section! Md Miraz Hossain Ovi is the Managing
-            Director, bringing leadership and vision to the company. With a
-            commitment to excellence and innovation, he drives the team toward
-            success and growth.
-          </p>
-        </div>
-      </section>
+      </div>      
     </div>
   );
 };
