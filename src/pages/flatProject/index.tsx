@@ -1,5 +1,4 @@
 import React from "react";
-import FlowUsSection from "@/components/shared/followUs/FollowUs";
 import banner from "../../../public/images/land3.jpg";
 import Image from "next/image";
 import ApartmentSection from "./ApartmentSection";
@@ -9,11 +8,6 @@ import kitchen from "../../../public/images/kitches-1.webp";
 import balconies from "../../../public/images/balconyes-1.webp";
 import washrooms from "../../../public/images/toiletto-1.webp";
 import ImageGallery from "@/components/pages/project/ImageGallery";
-import gallery1 from "../../../public/images/gallery1.webp";
-import gallery2 from "../../../public/images/gallery2.webp";
-import gallery3 from "../../../public/images/gallery3.webp";
-import gallery4 from "../../../public/images/gallery4.webp";
-import gallery5 from "../../../public/images/gallery1.webp";
 import EmbeddedMap from "@/components/shared/EmbeddedMap";
 
 const SwiperComponent = () => {
@@ -26,12 +20,22 @@ const SwiperComponent = () => {
   ];
 
   const gallerys = [
-    { src: gallery1, alt: "gallery" },
-    { src: gallery2, alt: "gallery" },
-    { src: gallery3, alt: "gallery" },
-    { src: gallery4, alt: "gallery" },
-    { src: gallery5, alt: "gallery" },
+    "/images/gallery1.webp",
+    "/images/gallery2.webp",
+    "/images/gallery3.webp",
+    "/images/gallery4.webp",
+    "/images/gallery1.webp",
   ];
+
+  const images = [
+    "/images/apartment_axonometric1.png",
+    "/images/apartmentAxonometric2.jpg",
+    "/images/apartmentAxonometric3.png",
+    "/images/apartmentAxonometric4.jpg",
+    "/images/apartmentAxonometric5.jpeg",
+    "/images/apartmentAxonometric6.jpg",
+  ];
+
   return (
     <div className="">
       <div className="relative w-full md:h-[500px] h-40">
@@ -42,7 +46,7 @@ const SwiperComponent = () => {
           className="object-cover brightness-50"
           priority
         />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center text-center">
           <h1 className="text-white md:text-4xl text-3xl font-bold  tracking-wider uppercase">
             Blue Sky Flat Project
           </h1>
@@ -74,13 +78,29 @@ const SwiperComponent = () => {
             ))}
           </div>
         </section>
+        {/* floor plane */}
+        <section>
+          <h1 className="text-center md:text-5xl text-3xl md:my-10 my-4">
+            Floor Plane
+          </h1>
+          <ImageGallery
+            images={images}
+            modalWidth="w-[850px]"
+            modalHeight="h-[800px]"
+          />
+        </section>
         {/* gallery */}
-        <ImageGallery title="gallery" images={gallerys} />
-        {/* <FlowUsSection /> */}
+        <h1 className="text-center md:text-5xl text-3xl md:my-10 my-4">
+          Gallery
+        </h1>
+        <ImageGallery
+          images={gallerys}
+          modalWidth="w-[90vw]"
+          modalHeight="h-[80vh]"
+        />{" "}
       </div>
-        {/* google map */}
-        <EmbeddedMap/>
-
+      {/* google map */}
+      <EmbeddedMap />
     </div>
   );
 };

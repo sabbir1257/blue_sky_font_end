@@ -70,15 +70,15 @@ const ApartmentSection = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1">
+      <div className="grid grid-cols-1 gap-4">
         {details.map((item, idx) => (
-          <div key={idx} className="flex gap-4">
-            <BiCopy className="w-5 h-5 mt-1 text-blue-800" />
-            <div className="flex w-full">
-              <span className="font-semibold text-blue-900 min-w-[180px]">
+          <div key={idx} className="flex items-start gap-2">
+            <BiCopy className="w-5 h-5 text-blue-800 mt-1" />
+            <div className="flex flex-col sm:flex-row sm:items-start w-full">
+              <span className="font-semibold text-blue-900 min-w-[140px] sm:min-w-[180px]">
                 {item.label}
               </span>
-              <span className="text-gray-700">: {item.value}</span>
+              <span className="text-gray-700 sm:ml-2">: {item.value}</span>
             </div>
           </div>
         ))}

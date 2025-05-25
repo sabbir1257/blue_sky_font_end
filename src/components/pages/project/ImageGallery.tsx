@@ -1,36 +1,67 @@
-import Image from 'next/image';
-import React from 'react';
+// components/ImageGallery.tsx
+import { useState } from "react";
+import Image from "next/image";
 
 interface ImageGalleryProps {
-  title: string;
-  images: { src: string; alt: string }[];
-  className?: string;
+  images: string[];
+  modalWidth?: string;
+  modalHeight?: string;
 }
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({ title, images, className = '' }) => {
-  return (
-    <div className={`py-16 px-4  text-gray-900 lg:w-[90%] lg:mx-auto mx-4 ${className}`}>
-      <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-12">
-        {title}
-      </h2>
+const ImageGallery: React.FC<ImageGalleryProps> = ({
+  images,
+  modalWidth = "w-[850px]",
+  modalHeight = "h-[800px]",
+}) => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {images.map((image, index) => (
+  return (
+    <section className="p-6">
+      {/* Image Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+        {images.map((img, idx) => (
           <div
-            key={index}
-            className="group relative overflow-hidden h-80 md:h-[420px]  rounded-xl transition-all duration-500"
+            key={idx}
+            className="cursor-pointer w-[350px] h-[300px]"
+            onClick={() => setSelectedImage(img)}
           >
             <Image
-              src={image.src}
-              alt={image.alt}
-              width={400}
-              height={450}
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-all duration-500 ease-in-out"
+              src={img}
+              alt={`Gallery Image ${idx + 1}`}
+              width={350}
+              height={300}
+              className="rounded-lg shadow object-cover w-full h-full hover:scale-105 transition-transform duration-300"
             />
           </div>
         ))}
       </div>
-    </div>
+
+      {/* Modal for Zoomed Image */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className={`relative ${modalWidth} ${modalHeight} bg-white p-4 rounded-lg shadow-lg`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage}
+              alt="Zoomed"
+              fill
+              className="object-contain rounded"
+            />
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-2 right-4 text-black text-4xl font-bold"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
   );
 };
 
