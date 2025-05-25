@@ -59,8 +59,6 @@ export default function ProjectDetail() {
         <h1 className="text-4xl font-bold mb-4 text-center text-blue-900">
           {project.title}
         </h1>
-        <p className="text-lg mb-8 text-center">{project.description}</p>
-
         {/* Two Column Layout */}
         <div className="gap-10 grid md:grid-cols-2 grid-cols-1 my-10 justify-between mx-2">
           {/* Left Side - Image & Buttons */}
