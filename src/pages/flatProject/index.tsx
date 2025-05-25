@@ -1,7 +1,6 @@
 import React from "react";
 import banner from "../../../public/images/land3.jpg";
 import Image from "next/image";
-import ApartmentSection from "./ApartmentSection";
 import bedrooms from "../../../public/images/bedroomes-1.webp";
 import living from "../../../public/images/living-rooms-1.webp";
 import kitchen from "../../../public/images/kitches-1.webp";
@@ -9,6 +8,8 @@ import balconies from "../../../public/images/balconyes-1.webp";
 import washrooms from "../../../public/images/toiletto-1.webp";
 import ImageGallery from "@/components/pages/project/ImageGallery";
 import EmbeddedMap from "@/components/shared/EmbeddedMap";
+import ProjectCard from "@/components/pages/project/flarProjectCard";
+import { projects } from "../../../public/datas/flatProject/projects";
 
 const SwiperComponent = () => {
   const image = [
@@ -53,7 +54,15 @@ const SwiperComponent = () => {
         </div>
       </div>
       <div className="max-w-[1200px] mx-auto">
-        <ApartmentSection />
+        {/* card */}
+        <main className="p-8 max-w-7xl mx-auto">
+          <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">My Projects</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </main>
         {/*  FEATURE & AMENITIES section */}
         <section className="my-10 px-4">
           <h1 className="text-center md:text-5xl text-3xl font-semibold mb-10">

@@ -1,6 +1,5 @@
-// app/components/ApartmentOverview.tsx
-import React, { useEffect, useState } from "react";
-import flat from "../../../public/images/flat_img.jpg";
+import React from "react";
+import flat from "../../../../public/images/flat_img.jpg";
 import { FaFileDownload } from "react-icons/fa";
 import { GrSchedules } from "react-icons/gr";
 import { BiCopy } from "react-icons/bi";
@@ -54,9 +53,7 @@ const ApartmentSection = () => {
           src={flat}
           alt=""
         />
-        <div className="border text-center my-10 p-10 rounded-xl">
-          <h5 className="text-2xl font-semibold">Proceed ti the</h5>
-          <h1 className="text-4xl font-semibold text-[#1e3a8a]">Next Phase</h1>
+        <div className="p-5 rounded-xl">
           <div className="flex flex-col sm:flex-row gap-4 justify-between mt-8">
             {" "}
             <button className="flex text-lg p-3 hover:bg-[#2546a0]  gap-3 rounded-xl bg-[#1e3a8a] text-white items-center">

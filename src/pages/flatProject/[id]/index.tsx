@@ -1,148 +1,169 @@
-import { useRouter } from 'next/router';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { useRouter } from "next/router";
+import { projects } from "../../../../public/datas/flatProject/projects";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { FaFileDownload } from "react-icons/fa";
+import { GrSchedules } from "react-icons/gr";
+import { BiCopy } from "react-icons/bi";
+import ImageGallery from "@/components/pages/project/ImageGallery";
+import EmbeddedMap from "@/components/shared/EmbeddedMap";
+import bedrooms from "../../../../public/images/bedroomes-1.webp";
+import living from "../../../../public/images/living-rooms-1.webp";
+import kitchen from "../../../../public/images/kitches-1.webp";
+import balconies from "../../../../public/images/balconyes-1.webp";
+import washrooms from "../../../../public/images/toiletto-1.webp";
+export default function ProjectDetail() {
+  const router = useRouter();
+  const { id } = router.query;
+  const [project, setProject] = useState<any>(null);
 
-const towerData = [
-    {
-        id: 1,
-        name: 'Skyline Tower',
-        location: 'Banani, Dhaka',
-        floors: 32,
-        units: 180,
-        description: 'A modern masterpiece featuring luxurious rooftop views, intelligent living systems, and vibrant community zones.',
-        image: '/images/tower1.png',
-    },
-    {
-        id: 2,
-        name: 'Horizon Heights',
-        location: 'Gulshan, Dhaka',
-        floors: 28,
-        units: 150,
-        description: 'Horizon Heights blends comfort and nature. Wake up to lake views and unwind in lush landscaped gardens.',
-        image: '/images/tower1.png',
-    },
-    {
-        id: 3,
-        name: 'Eco Arc Tower',
-        location: 'Bashundhara, Dhaka',
-        floors: 25,
-        units: 130,
-        description: 'Eco Arc is built for sustainability—solar powered, water efficient, and ready for the future.',
-        image: '/images/tower1.png',
-    },
-];
+  useEffect(() => {
+    if (id) {
+      const found = projects.find((p) => p.id === id);
+      setProject(found || null);
+    }
+  }, [id]);
 
-const TowerDetailPage = () => {
-    const router = useRouter();
-    const { id } = router.query;
-    const tower = towerData.find((t) => t.id === Number(id));
+  if (!project)
+    return <p className="p-10 text-center">Loading or project not found...</p>;
 
-    if (!tower) return <p className="text-center py-20">Tower not found</p>;
+   const image = [
+    { img: bedrooms, value: "3 Bedrooms" },
+    { img: living, value: "Living & Family Living" },
+    { img: kitchen, value: "Kitchen" },
+    { img: balconies, value: "2 Balconies" },
+    { img: washrooms, value: "3 Washrooms" },
+  ];
 
-    return (
-        <div className="min-h-screen bg-[#f9fafb]">
-            {/* Hero Section */}
-            <div className="relative w-full h-[60vh]">
-                <Image
-                    src={tower.image}
-                    fill
-                    className="object-cover brightness-75"
-                    alt={tower.name}
-                />
-                <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-6">
-                    <h1 className="text-5xl font-bold drop-shadow-lg">{tower.name}</h1>
-                    <p className="text-xl mt-2 drop-shadow-md">{tower.location}</p>
-                </div>
+
+   const gallerys = [
+    "/images/gallery1.webp",
+    "/images/gallery2.webp",
+    "/images/gallery3.webp",
+    "/images/gallery4.webp",
+    "/images/gallery1.webp",
+  ];
+
+  const images = [
+    "/images/apartment_axonometric1.png",
+    "/images/apartmentAxonometric2.jpg",
+    "/images/apartmentAxonometric3.png",
+    "/images/apartmentAxonometric4.jpg",
+    "/images/apartmentAxonometric5.jpeg",
+    "/images/apartmentAxonometric6.jpg",
+  ];
+
+  return (
+    <section className="">
+      <main className="p-4 md:p-8 max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4 text-center text-blue-900">
+          {project.title}
+        </h1>
+        <p className="text-lg mb-8 text-center">{project.description}</p>
+
+        {/* Two Column Layout */}
+        <div className="gap-10 grid md:grid-cols-2 grid-cols-1 my-10 justify-between mx-2">
+          {/* Left Side - Image & Buttons */}
+          <div>
+            <Image
+              className="w-full h-auto max-w-[600px] max-h-[650px] rounded-lg"
+              src={project.image}
+              alt={project.title}
+              width={600}
+              height={650}
+            />
+            <div className="p-5 rounded-xl">
+              <div className="flex flex-col sm:flex-row gap-4 justify-between mt-8">
+                <button className="flex text-lg p-3 hover:bg-[#2546a0] gap-3 rounded-xl bg-[#1e3a8a] text-white items-center">
+                  <FaFileDownload />
+                  Download Brochure
+                </button>
+                <button className="flex border-2 text-lg p-3 gap-3 rounded-xl items-center">
+                  <GrSchedules />
+                  Schedule a Meeting
+                </button>
+              </div>
             </div>
+          </div>
 
-            {/* Detail Content */}
-            <div className="max-w-6xl mx-auto px-6 py-16">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="grid lg:grid-cols-2 gap-12 items-start"
-                >
-                    {/* Left Side - Image Card */}
-                    <div className="rounded-3xl shadow-xl overflow-hidden">
-                        <Image
-                            src={tower.image}
-                            alt={tower.name}
-                            width={600}
-                            height={600}
-                            className="object-cover w-full h-[60vh]"
-                        />
-                    </div>
-
-                    {/* Right Side - Text + Gallery */}
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-4 text-gray-800">About the Tower</h2>
-                        <p className="text-gray-600 text-lg leading-relaxed mb-6">{tower.description}</p>
-
-                        <div className="grid grid-cols-2 gap-6 mt-10">
-                            <div className="p-6 bg-white rounded-2xl shadow-md border-t-4 border-blue-500 text-center">
-                                <h3 className="text-xl font-bold text-gray-800">Floors</h3>
-                                <p className="text-3xl text-blue-600 mt-2">{tower.floors}</p>
-                            </div>
-                            <div className="p-6 bg-white rounded-2xl shadow-md border-t-4 border-purple-500 text-center">
-                                <h3 className="text-xl font-bold text-gray-800">Units</h3>
-                                <p className="text-3xl text-purple-600 mt-2">{tower.units}</p>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
-
-                {/* Image Gallery */}
-                <div className="mt-20">
-                    <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">Stunning Tower Gallery</h3>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                        {['/images/tower1.png', '/images/tower1.png', '/images/tower1.png', '/images/tower1.png', '/images/tower1.png'].map((img, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: i * 0.2 }}
-                                viewport={{ once: true }}
-                                className={`relative group overflow-hidden rounded-xl shadow-xl transition-all duration-300 ${i % 2 === 0 ? 'col-span-1 row-span-2' : 'col-span-1'
-                                    }`}
-                            >
-                                <Image
-                                    src={img}
-                                    alt={`Gallery image ${i + 1}`}
-                                    width={i % 2 === 0 ? 350 : 280} // Varying image sizes
-                                    height={i % 2 === 0 ? 550 : 280} // Varying aspect ratios
-                                    className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
-                                />
-
-                                <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/40 opacity-0 group-hover:opacity-90 transition-opacity duration-300">
-                                    <p className="absolute bottom-4 left-4 text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">Tower {i + 1}</p>
-                                </div>
-
-                            </motion.div>
-                        ))}
-                    </div>
+          {/* Right Side - Project Details */}
+          <div className="grid grid-cols-1 gap-4">
+            {project.details?.map((item: any, idx: number) => (
+              <div key={idx} className="flex items-start gap-2">
+                <BiCopy className="w-5 h-5 text-blue-800 mt-1" />
+                <div className="flex flex-col sm:flex-row sm:items-start w-full">
+                  <span className="font-semibold text-blue-900 min-w-[140px] sm:min-w-[180px]">
+                    {item.label}
+                  </span>
+                  <span className="text-gray-700 sm:ml-2">: {item.value}</span>
                 </div>
-
-
-
-
-            </div>
-
-
-            {/* Optional CTA Section */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-700 py-12">
-                <div className="max-w-5xl mx-auto text-center text-white">
-                    <h2 className="text-3xl font-semibold mb-2">Interested in this tower?</h2>
-                    <p className="mb-6 text-lg">Contact our team to book a visit or get more information.</p>
-                    <button className="bg-white text-blue-700 font-bold px-8 py-3 rounded-full hover:bg-gray-100 transition">
-                        Get in Touch
-                    </button>
-                </div>
-            </div>
+              </div>
+            ))}
+          </div>
         </div>
-    );
-};
 
-export default TowerDetailPage;
+        {/* GitHub Link (if available) */}
+        {project.github && (
+          <div className="text-center mt-10">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
+            >
+              View on GitHub
+            </a>
+          </div>
+        )}
+      </main>
+      <div className="max-w-[1250px] mx-auto">
+         {/*  FEATURE & AMENITIES section */}
+        <section className="my-10 px-4">
+          <h1 className="text-center md:text-5xl text-3xl font-semibold mb-10">
+            FEATURE & AMENITIES
+          </h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-6">
+            {image.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center text-center "
+              >
+                <div className="relative w-60 h-60 gap-6">
+                  <Image
+                    src={item.img}
+                    alt={item.value}
+                    fill
+                    className="object-cover rounded-md w-24"
+                  />
+                </div>
+                <p className="mt-3 text-lg font-medium">{item.value}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* floor plane */}
+        <section>
+          <h1 className="text-center md:text-5xl text-3xl md:my-10 my-4">
+            Floor Plane
+          </h1>
+          <ImageGallery
+            images={images}
+            modalWidth="w-[850px]"
+            modalHeight="h-[800px]"
+          />
+        </section>
+        {/* gallery */}
+        <h1 className="text-center md:text-5xl text-3xl md:my-10 my-4">
+          Gallery
+        </h1>
+        <ImageGallery
+          images={gallerys}
+          modalWidth="w-[90vw]"
+          modalHeight="h-[80vh]"
+        />
+      </div>
+      {/* google map */}
+      <EmbeddedMap />
+    </section>
+  );
+}
