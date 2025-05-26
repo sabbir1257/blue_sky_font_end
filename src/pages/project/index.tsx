@@ -7,12 +7,13 @@ import React from "react";
 
 const Project = () => {
   const images = [
-   "/images/land.jpg",
-   "/images/land.jpg",
-   "/images/land.jpg",
-   "/images/land.jpg",
-   "/images/land.jpg",
-   "/images/land.jpg",
+    "/images/land.jpg",
+    "/images/land.jpg",
+    "/images/land.jpg",
+    "/images/land.jpg",
+    "/images/land.jpg",
+    "/images/land.jpg",
+   
   ];
   return (
     <section>
@@ -20,7 +21,11 @@ const Project = () => {
       <Facilities />
       <VideoShowSection />
       <Living />
-      <ImageGallery images={images} />
+      <ImageGallery 
+        images={images}
+        modalWidth="w-[850px]"
+        modalHeight="h-[800px]"
+      />
     </section>
   );
 };
