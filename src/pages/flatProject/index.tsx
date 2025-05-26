@@ -5,6 +5,7 @@ import EmbeddedMap from "@/components/shared/EmbeddedMap";
 import ProjectCard from "@/components/pages/project/flarProjectCard";
 import { projects } from "../../../public/datas/flatProject/projects";
 import FlowUsSection from "@/components/shared/followUs/FollowUs";
+import VideoShowSection from "@/components/pages/project/VideoShowSection";
 
 const SwiperComponent = () => {
   return (
@@ -38,6 +39,8 @@ const SwiperComponent = () => {
       </div>
       {/* Flow us sertion */}
       <FlowUsSection />
+      {/* video */}
+      <VideoShowSection/>
       {/* google map */}
       <EmbeddedMap />
     </div>
