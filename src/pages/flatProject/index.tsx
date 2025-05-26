@@ -10,6 +10,7 @@ import ImageGallery from "@/components/pages/project/ImageGallery";
 import EmbeddedMap from "@/components/shared/EmbeddedMap";
 import ProjectCard from "@/components/pages/project/flarProjectCard";
 import { projects } from "../../../public/datas/flatProject/projects";
+import FlowUsSection from "@/components/shared/followUs/FollowUs";
 
 const SwiperComponent = () => {
   const image = [
@@ -63,51 +64,9 @@ const SwiperComponent = () => {
             ))}
           </div>
         </main>
-        {/*  FEATURE & AMENITIES section */}
-        <section className="my-10 px-4">
-          <h1 className="text-center md:text-5xl text-3xl font-semibold mb-10">
-            FEATURE & AMENITIES
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-6">
-            {image.map((item, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col items-center text-center "
-              >
-                <div className="relative w-60 h-60 gap-6">
-                  <Image
-                    src={item.img}
-                    alt={item.value}
-                    fill
-                    className="object-cover rounded-md w-24"
-                  />
-                </div>
-                <p className="mt-3 text-lg font-medium">{item.value}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-        {/* floor plane */}
-        <section>
-          <h1 className="text-center md:text-5xl text-3xl md:my-10 my-4">
-            Floor Plane
-          </h1>
-          <ImageGallery
-            images={images}
-            modalWidth="w-[850px]"
-            modalHeight="h-[800px]"
-          />
-        </section>
-        {/* gallery */}
-        <h1 className="text-center md:text-5xl text-3xl md:my-10 my-4">
-          Gallery
-        </h1>
-        <ImageGallery
-          images={gallerys}
-          modalWidth="w-[90vw]"
-          modalHeight="h-[80vh]"
-        />{" "}
       </div>
+      {/* Flow us sertion */}
+      <FlowUsSection/>
       {/* google map */}
       <EmbeddedMap />
     </div>
