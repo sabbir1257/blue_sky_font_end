@@ -27,7 +27,7 @@ export default function ProjectDetail() {
   if (!project)
     return <p className="p-10 text-center">Loading or project not found...</p>;
 
-   const image = [
+  const image = [
     { img: bedrooms, value: "3 Bedrooms" },
     { img: living, value: "Living & Family Living" },
     { img: kitchen, value: "Kitchen" },
@@ -35,8 +35,7 @@ export default function ProjectDetail() {
     { img: washrooms, value: "3 Washrooms" },
   ];
 
-
-   const gallerys = [
+  const gallerys = [
     "/images/gallery1.webp",
     "/images/gallery2.webp",
     "/images/gallery3.webp",
@@ -71,7 +70,7 @@ export default function ProjectDetail() {
               height={650}
             />
             <div className="p-5 rounded-xl">
-              <div className="flex flex-col sm:flex-row gap-4 justify-between mt-8">
+              <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-between mt-8">
                 <button className="flex text-lg p-3 hover:bg-[#2546a0] gap-3 rounded-xl bg-[#1e3a8a] text-white items-center">
                   <FaFileDownload />
                   Download Brochure
@@ -85,37 +84,28 @@ export default function ProjectDetail() {
           </div>
 
           {/* Right Side - Project Details */}
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 gap-4 w-full">
             {project.details?.map((item: any, idx: number) => (
-              <div key={idx} className="flex items-start gap-2">
-                <BiCopy className="w-5 h-5 text-blue-800 mt-1" />
-                <div className="flex flex-col sm:flex-row sm:items-start w-full">
+              <div
+                key={idx}
+                className="flex flex-col sm:flex-row sm:items-start gap-2"
+              >
+                <div className="flex items-start gap-2 w-full sm:w-auto">
+                  <BiCopy className="w-5 h-5 text-blue-800 mt-1" />
                   <span className="font-semibold text-blue-900 min-w-[140px] sm:min-w-[180px]">
                     {item.label}
                   </span>
-                  <span className="text-gray-700 sm:ml-2">: {item.value}</span>
                 </div>
+                <span className="text-gray-700 sm:ml-2 pl-7 sm:pl-0">
+                  : {item.value}
+                </span>
               </div>
             ))}
           </div>
         </div>
-
-        {/* GitHub Link (if available) */}
-        {project.github && (
-          <div className="text-center mt-10">
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
-            >
-              View on GitHub
-            </a>
-          </div>
-        )}
       </main>
       <div className="max-w-[1250px] mx-auto">
-         {/*  FEATURE & AMENITIES section */}
+        {/*  FEATURE & AMENITIES section */}
         <section className="my-10 px-4">
           <h1 className="text-center md:text-5xl text-3xl font-semibold mb-10">
             FEATURE & AMENITIES
@@ -156,8 +146,8 @@ export default function ProjectDetail() {
         </h1>
         <ImageGallery
           images={gallerys}
-          modalWidth="w-[90vw]"
-          modalHeight="h-[80vh]"
+          modalWidth="w-[850px]"
+          modalHeight="h-[800px]"
         />
       </div>
       {/* google map */}
