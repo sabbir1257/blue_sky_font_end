@@ -4,7 +4,7 @@ import React from 'react';
 const facilityList = [
   { title: 'Electric', img: '/images/Living/electric-factory.png', alt: 'electric' },
   { title: 'Gas', img: '/images/Living/Titash_Gas.png', alt: 'gas' },
-  { title: 'Water', img: '/images/Living/Wasa.png', alt: 'water' },
+  { title: 'Water', img: '/images/Living/Wasa1.png', alt: 'water' },
   { title: 'Call', img: '/images/Living/BTCL.png', alt: 'call' },
 ];
 

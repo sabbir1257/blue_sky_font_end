@@ -2,11 +2,11 @@ import Image from "next/image";
 import React from "react";
 
 const facilities = [
-  { title: "Mosque", img: "/images/Living/mosque.png", alt: "Mosque" },
+  { title: "Mosque", img: "/images/Living/mosque1.png", alt: "Mosque" },
   { title: "School", img: "/images/Living/school.png", alt: "School" },
   {
     title: "Fire Service Station",
-    img: "/images/Living/fire-station.png",
+    img: "/images/Living/Fire_Service_Station1.png",
     alt: "Fire Service Station",
   },
   {
@@ -16,7 +16,7 @@ const facilities = [
   },
   {
     title: "Wasa",
-    img: "/images/Living/Wasa.png",
+    img: "/images/Living/Wasa1.png",
     alt: "Wasa",
   },
   {
@@ -36,12 +36,12 @@ const facilities = [
   },
   {
     title: "PDB Office",
-    img: "/images/Living/pdb-file.png",
+    img: "/images/Living/PDB1.png",
     alt: "PDB Office",
   },
   {
     title: "Green Road",
-    img: "/images/Living/road.png",
+    img: "/images/Living/Green_Road1.png",
     alt: "Green Road",
   },
   {
@@ -56,7 +56,7 @@ const facilities = [
   },
   {
     title: "BTCL",
-    img: "/images/Living/BTCL.png",
+    img: "/images/Living/BTCL1.png",
     alt: "BTCL",
   },
   {
@@ -66,12 +66,12 @@ const facilities = [
   },
   {
     title: "Titash Gas",
-    img: "/images/Living/Titash_Gas.png",
+    img: "/images/Living/Gas1.png",
     alt: "Titash Gas",
   },
   {
     title: "Graveyard",
-    img: "/images/Living/Graveyard.png",
+    img: "/images/Living/Graveyard1.png",
     alt: "Graveyard",
   },
   {
