@@ -11,9 +11,13 @@ const VideoShowSection = () => {
   return (
     <div className="py-16 text-white mx-4 lg:mx-0">
       <div className="relative max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-blue-900 mb-6">
-          Watch Our Dream Project
-        </h2>
+       <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+            Why Choose Blue Sky City
+          </h2>
+          <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
+        </div>
+
 
         <div className="relative">
           {/* Image Thumbnail with Blur */}

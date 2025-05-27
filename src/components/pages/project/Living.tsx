@@ -90,17 +90,19 @@ const facilities = [
 const Living = () => {
   return (
     <div>
-      <h5 className="title text-center mt-10 text-blue-900">
-        Living Standard in the City
-      </h5>
-      <p className="text-center w-[50%] mx-auto pt-6 pb-20">
+     <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+           Living Standard in the City
+          </h2>
+          <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
+        <p className="text-center w-[50%] mx-auto pt-6 pb-20">
         Blue Sky Cite LTD is the other name of the trust, reliability, and
         social partnership model. We maintain all the living standards of modern
         township planning in the capital city Dhaka. We are committed to people,
         communities, and sustainability.
       </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 w-[70%] mx-auto ">
+        </div>
+ <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 w-[70%] mx-auto ">
         {facilities.map((item, index) => (
           <div
             key={index}

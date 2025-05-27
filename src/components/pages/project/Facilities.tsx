@@ -2,7 +2,11 @@ import Image from 'next/image';
 import React from 'react';
 
 const facilityList = [
-  { title: 'Electric', img: '/images/Living/electric-factory.png', alt: 'electric' },
+  {
+    title: 'Electric',
+    img: '/images/Living/electric-factory.png',
+    alt: 'electric',
+  },
   { title: 'Gas', img: '/images/Living/Titash_Gas.png', alt: 'gas' },
   { title: 'Water', img: '/images/Living/Wasa1.png', alt: 'water' },
   { title: 'Call', img: '/images/Living/BTCL.png', alt: 'call' },
@@ -11,11 +15,18 @@ const facilityList = [
 const Facilities = () => {
   return (
     <div>
-      <h5 className="title text-center mt-10 text-blue-900">Our Facilities</h5>
-      <p className="text-center w-[50%] mx-auto pt-6 pb-20">
-        Electricity, gas, water, telephone, sewerage system, police station and other needs will be met as per the company’s and the government rules and regulations. The company will be responsible for the completion of these tasks in contact with the authority concerned
-      </p>
-
+      <div className="text-center my-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+          Our Facilities
+        </h2>
+        <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
+        <p className="text-center w-[50%] mx-auto pt-6 pb-20">
+          Electricity, gas, water, telephone, sewerage system, police station
+          and other needs will be met as per the company’s and the government
+          rules and regulations. The company will be responsible for the
+          completion of these tasks in contact with the authority concerned
+        </p>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 w-[70%] mx-auto">
         {facilityList.map((facility, index) => (
           <div

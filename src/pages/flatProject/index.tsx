@@ -1,11 +1,11 @@
-import React from "react";
-import banner from "../../../public/images/land3.jpg";
-import Image from "next/image";
-import EmbeddedMap from "@/components/shared/EmbeddedMap";
-import ProjectCard from "@/components/pages/project/flarProjectCard";
-import { projects } from "../../../public/datas/flatProject/projects";
-import FlowUsSection from "@/components/shared/followUs/FollowUs";
-import VideoShowSection from "@/components/pages/project/VideoShowSection";
+import React from 'react';
+import banner from '../../../public/images/land3.jpg';
+import Image from 'next/image';
+import EmbeddedMap from '@/components/shared/EmbeddedMap';
+import ProjectCard from '@/components/pages/project/flarProjectCard';
+import { projects } from '../../../public/datas/flatProject/projects';
+import FlowUsSection from '@/components/shared/followUs/FollowUs';
+import VideoShowSection from '@/components/pages/project/VideoShowSection';
 
 const SwiperComponent = () => {
   return (
@@ -27,9 +27,13 @@ const SwiperComponent = () => {
       <div className="max-w-[1200px] mx-auto">
         {/* card */}
         <main className="p-8 max-w-7xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center">
-            My Projects
-          </h1>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+              My Projects
+            </h2>
+            <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
@@ -40,7 +44,7 @@ const SwiperComponent = () => {
       {/* Flow us sertion */}
       <FlowUsSection />
       {/* video */}
-      <VideoShowSection/>
+      <VideoShowSection />
       {/* google map */}
       <EmbeddedMap />
     </div>
