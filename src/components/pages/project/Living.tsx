@@ -100,19 +100,19 @@ const Living = () => {
         communities, and sustainability.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 w-[70%] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 w-[70%] mx-auto ">
         {facilities.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center shadow-xl p-10 rounded-2xl transition-transform transform hover:scale-110"
+            className="bg-[#1e3a8a] text-white flex flex-col items-center shadow-xl p-10 rounded-2xl transition-transform transform hover:scale-110"
           >
-            <div className="bg-blue-300 rounded-full h-[120px] w-[120px] flex justify-center items-center overflow-hidden">
+            <div className="  h-[120px] w-[120px] flex justify-center items-center overflow-hidden">
               <Image
                 width={80}
                 height={80}
                 src={item.img}
                 alt={item.alt}
-                className="object-contain"
+  className="object-contain filter invert brightness-0"
               />
             </div>
 

@@ -1,32 +1,43 @@
 const WhyChooseUs = () => {
-    return (
-      <section className="py-16 bg-gray-100">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Us?</h2>
-          <p className="text-lg text-gray-600 mb-10">
-            We provide the best services with a commitment to excellence and customer satisfaction.
-          </p>
-  
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              { title: "Exceptional Customer Service", description:  "We're available 24/7 with dedicated support to ensure your needs are always met."},
-              { title: "Client-Centered Approach", description: "We listen, adapt, and build long-term partnerships focused on your success." },
-              { title: "Affordable Pricing", description: "Transparent, flexible pricing with no hidden fees, ensuring great value for your investment." },
-              { title: "Prime Locations", description: "Strategic, high-traffic locations that offer maximum visibility and accessibility." }
-            ].map((feature, index) => (
-              <div key={index} className="flex items-start space-x-4 p-6 bg-white rounded-lg shadow-md">
-                <div className="text-blue-500 text-3xl">✔</div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+  const points = [
+    "Blue Sky City is set to be one of the most planned cities outside Dhaka City Corporation.",
+    "Branches of renowned educational institutes and hospitals will exist in this city, In shā Allāh.",
+    "Connected to the Dhaka-Mawa bypass—no more traffic-jam woes.",
+    "Enjoy fresh, natural air next to the 300-ft-wide bypass.",
+    "Pollution-free, well-planned, and aesthetically charming.",
+    "Only 20 minutes from the Prime Minister’s residence.",
+    "Designed by skilled planners in line with authority guidelines.",
+    "Any kind of vehicle can reach the project with ease.",
+    "Easy terms and long-term installment plans available.",
+    "Ideal high-ground location—outside flood, DAP & flying zones.",
+  ];
+
+  return (
+    <section className="bg-gradient-to-br from-blue-50 via-white to-blue-100 py-16 px-4">
+      <div className="max-w-[1200px] mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+            Why Choose Blue Sky City
+          </h2>
+          <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
         </div>
-      </section>
-    );
-  };
-  
-  export default WhyChooseUs;
-  
+
+        {/* Grid List */}
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-800">
+          {points.map((point, index) => (
+            <li
+              key={index}
+              className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-md hover:shadow-xl transition duration-300"
+            >
+              <span className="text-blue-600 text-xl mt-1">✅</span>
+              <p className="text-sm md:text-base">{point}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseUs;
