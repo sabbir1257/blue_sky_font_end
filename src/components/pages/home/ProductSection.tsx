@@ -11,16 +11,19 @@ export default function ProductSection() {
       </div>
       <div className="grid md:grid-cols-3 gap-12">
         <ProductCard
+          iamge="/images/land.jpg"
           title="🏡 Land"
           color="blue"
           description="Discover premium plots located in prime areas, perfect for both residential and commercial development. Secure your future with strategic land investments."
         />
         <ProductCard
+          iamge="/images/land.jpg"
           title="🏢 Flat"
           color="green"
           description="Experience luxurious living with modern apartments featuring top-tier amenities designed for your comfort and convenience."
         />
         <ProductCard
+          iamge="/images/land.jpg"
           title="📈 Share"
           color="purple"
           description="Invest in the stock market with expert insights and guidance. Maximize your financial potential with profitable shares and investment strategies."

@@ -9,7 +9,7 @@ import OurBusiness from '@/components/pages/home/OurBusiness';
 import ProductSection from '@/components/pages/home/ProductSection';
 import StepsSection from '@/components/pages/home/StepsSection';
 import TestimonialSlider from '@/components/pages/home/TestimonialSlider';
-import WhyChooseUs from '@/components/pages/home/WhyChooseUs';
+// import WhyChooseUs from '@/components/pages/home/WhyChooseUs';
 import FlowUsSection from '@/components/shared/followUs/FollowUs';
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <GetQuotes />
         <ProductSection />
         <OurBusiness />
-        <WhyChooseUs />
+        {/* <WhyChooseUs /> */}
         <TestimonialSlider />
         {/* <CaseStudies /> */}
         {/* mission and vision section show about page  */}
