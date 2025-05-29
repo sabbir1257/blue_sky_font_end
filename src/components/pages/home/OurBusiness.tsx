@@ -5,20 +5,24 @@ const businesses = [
   {
     title: "Blue Sky Dream Hotel and Resorts",
     description:
-      "We help clients identify, acquire, and develop properties tailored to their goals. From urban planning to final delivery, we manage the full lifecycle. Our team ensures all zoning, permits, and environmental concerns are handled professionally to reduce delays and risks.",
+      "We help clients identify, acquire, and develop properties tailored to their goals. From urban planning to final delivery, we manage the full lifecycle.",
     image: "/images/land.jpg",
+    points: [
+      "Full property lifecycle management",
+      "Zoning and permit handling",
+      "Risk mitigation and environmental planning",
+    ],
   },
   {
-    title: "Investment Strategy",
+    title: "Blue Sky Dream Society",
     description:
-      "Maximize returns with expert insights on real estate trends, risks, and capital allocation. We help you build a sustainable investment portfolio, guide you through market research, and provide ongoing performance analysis to adapt to changing conditions.",
+      "Maximize returns with expert insights on real estate trends, risks, and capital allocation. We help you build a sustainable investment portfolio.",
     image: "/images/land.jpg",
-  },
-  {
-    title: "Construction & Management",
-    description:
-      "With a dedicated project team, we handle residential and commercial builds from blueprint to handover. We emphasize budget control, transparency, and quality assurance through every phase — from contractor selection to project completion.",
-    image: "/images/land.jpg",
+    points: [
+      "Market trend analysis",
+      "Capital allocation strategies",
+      "Performance tracking and adaptation",
+    ],
   },
 ];
 
@@ -44,11 +48,20 @@ const OurBusiness = () => {
             <img
               src={biz.image}
               alt={biz.title}
-              className="w-full md:w-1/2 h-72 object-cover rounded-lg shadow"
+              className="w-full md:w-1/2 h-82 object-cover rounded-lg shadow"
             />
             <div className="md:w-1/2">
               <h3 className="text-2xl font-semibold text-blue-800">{biz.title}</h3>
               <p className="text-gray-600 mt-3 leading-relaxed">{biz.description}</p>
+
+              {/* Bullet points */}
+              {biz.points && (
+                <ul className="list-disc list-inside text-gray-700 mt-4 space-y-1">
+                  {biz.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         ))}

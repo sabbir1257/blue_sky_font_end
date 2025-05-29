@@ -56,12 +56,12 @@ const Navbar = () => {
 
                   {/* Child items dropdown */}
                   {link?.children && (
-                    <div className="absolute left-0 top-full mt-2 bg-blue-800 text-white rounded-md shadow-lg w-72 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 ease-in-out">
+                    <div className="absolute left-0 top-full mt-2 bg-blue-800 text-white rounded-md shadow-lg w-56 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 ease-in-out">
                       {link.children.map((item: any, j: number) => (
                         <div key={j}>
                           <Link
                             href={item.path}
-                            className="block px-4 py-2 hover:bg-blue-700"
+                            className="block px-4 py-2 hover:bg-blue-700 truncate w-full max-w-[230px]"
                           >
                             {item.name}
                           </Link>
