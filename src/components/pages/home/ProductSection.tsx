@@ -1,11 +1,14 @@
-import ProductCard from "./ProductCard";
+import ProductCard from './ProductCard';
 
 export default function ProductSection() {
   return (
-    <div className="py-16 bg-gradient-to-b from-gray-50 to-gray-200 text-gray-900 px-6 md:px-12 lg:px-24">
-      <h2 className="text-5xl font-extrabold text-gray-800 text-center mb-12">
-        Explore Our Products
-      </h2>
+    <div className="py-16 px-6">
+      <div className="text-center my-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+          Explore Our Projects
+        </h2>
+        <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
+      </div>
       <div className="grid md:grid-cols-3 gap-12">
         <ProductCard
           title="🏡 Land"

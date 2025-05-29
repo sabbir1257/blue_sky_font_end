@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-blue-50 via-white to-blue-100 py-16 px-4">
+    <section className="py-16 px-4">
       <div className="max-w-[1200px] mx-auto">
         {/* Heading */}
         <div className="text-center mb-12">
