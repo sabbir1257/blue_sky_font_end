@@ -33,15 +33,8 @@ const OurHistories = () => {
           <h1 className="title">SHORT HISTORY</h1>
           <Separator />
           <p className="paragraph mt-5 text-justify">
-            A tale of a fateful trip that started from this tropic port aboard
-            this tiny ship today still wanted by the government they survive as
-            soldiers of fortune to a deluxe you apartment in the sky to explore
-            strange new worlds to seek out new life and new civilizations to
-            boldly go where no man has gone.
-            <br />
-            <br />
-            You would see the biggest gift would be from me and the card
-            attached would so thank you for being a friend the biggest gift.
+            Our journey started by Mr. Harun-Nur-Rashid, Managing Director of Blue Sky Dream City Limited, in 2022 as a housing company. We have a vision to provide the best planned urban living near Dhaka with full support & facilities. Our thought process to create a dream address near Dhaka, which is now very tough for many inside Dhaka for many of us. The west part of Dhaka is the next one to develop, mostly with the latest infrastructure in Bangladesh. So we picked the opportunity to build such a great housing project and build a better society.
+
           </p>
           <Button className="bg-gray-100 border px-8 py-3 shadow-sm mt-10 w-fit rounded-md">
             LEARN MORE
