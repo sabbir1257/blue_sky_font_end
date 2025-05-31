@@ -1,37 +1,30 @@
 /* eslint-disable @next/next/no-img-element */
-import Container from "@/components/ui/Container";
+import Container from '@/components/ui/Container';
+import Image from 'next/image';
 
 const OurPartners = () => {
   const logos = [
-    "/images/Logo_PNG.png",
-    "/images/logo/p-2.png",
-    "/images/logo/p-3.png",
-    "/images/logo/p-4.png",
-    "/images/logo/p-5.png",
+    '/images/Logo_PNG.png',
+    '/images/logo/p-2.png',
+    '/images/logo/p-3.png',
+    '/images/logo/p-4.png',
+    '/images/logo/p-5.png',
   ];
 
   return (
-    <section className="bg-gray-100 py-2">
+    <section className="bg-gray-100 py-6">
       <Container>
-        <div className="gap-10 lg:gap-0 justify-between items-center">
-          <div className="flex flex-wrap gap-8">
-            {logos.map((logo, i) => (
-              <img
-                key={i}
-                src={logo}
-                alt="logo"
-                className="filter grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition duration-300 ease-in-out"
-                style={{
-                  maxHeight: "60px",
-                  cursor: "pointer",
-                  backgroundColor: "white",
-                  padding: "6px",
-                  borderRadius: "6px",
-                  boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-                }}
-              />
-            ))}
-          </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center">
+          {logos.map((logo, i) => (
+            <Image
+              key={i}
+              src={logo}
+              alt={`partner-logo-${i}`}
+              className="w-30 h-20 filter grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition duration-300 ease-in-out bg-white p-3 rounded-md shadow-md"
+              width={100}
+              height={100}
+            />
+          ))}
         </div>
       </Container>
     </section>
