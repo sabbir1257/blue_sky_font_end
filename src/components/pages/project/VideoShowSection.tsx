@@ -1,4 +1,5 @@
 import { PlayIcon } from '@/components/Icons/Icons';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const VideoShowSection = () => {
@@ -11,22 +12,23 @@ const VideoShowSection = () => {
   return (
     <div className="py-16 text-white mx-4 lg:mx-0">
       <div className="relative max-w-7xl mx-auto text-center">
-       <div className="text-center mb-12">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
             Why Choose Blue Sky City
           </h2>
           <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
         </div>
 
-
         <div className="relative">
           {/* Image Thumbnail with Blur */}
           {!isVideoVisible && (
             <div className="relative w-full h-[480px] md:h-[500px] bg-gray-300 rounded-lg">
-              <img
-                className="w-full h-full object-cover rounded-lg filter blur-sm transition-all duration-300"
+              <Image
                 src="https://img.youtube.com/vi/o9F7oUgmyg0/maxresdefault.jpg"
                 alt="Video Thumbnail"
+                fill
+                className="object-cover rounded-lg filter blur-sm transition-all duration-300"
+                sizes="(max-width: 768px) 100vw, 700px"
               />
               <button
                 onClick={handlePlayClick}
