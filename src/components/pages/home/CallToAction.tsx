@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { FaPhoneAlt, FaRocket } from "react-icons/fa";
-import { useState, FormEvent } from "react";
+import Link from 'next/link';
+import { FaPhoneAlt, FaRocket } from 'react-icons/fa';
+import { useState, FormEvent } from 'react';
 
 const CallToAction: React.FC = () => {
-  const [email, setEmail] = useState<string>("");
+  const [email, setEmail] = useState<string>('');
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert(`Email submitted: ${email}`);
-    setEmail("");
+    setEmail('');
   };
 
   return (
@@ -27,7 +27,7 @@ const CallToAction: React.FC = () => {
         </h2>
 
         <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-          Our Team is ready to guide you to invest- we're just a click away.
+          {"Our Team is ready to guide you to invest— we're just a click away."}
         </p>
 
         {/* Email input form */}
