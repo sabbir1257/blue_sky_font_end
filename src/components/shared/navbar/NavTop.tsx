@@ -25,7 +25,7 @@ const NavTop = () => {
                             <EmailSendIcon className='text-[40px]' />
                             <div>
                                 <h1 className='text-xl font-medium '>Mail us:</h1>
-                                <p className='text-gray-500 '>supporthere@mail.com
+                                <p className='text-gray-500 '>blueskycitylimited@gmail.com
 
                                 </p>
                             </div>
