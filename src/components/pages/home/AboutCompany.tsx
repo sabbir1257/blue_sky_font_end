@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { MedalIcon, StarIcon, TargetIcon } from '@/components/Icons/Icons';
 import Container from '@/components/ui/Container';
-import Separator from '@/components/ui/Separator';
 
 const AboutCompany = () => {
   const aboutLink = [
