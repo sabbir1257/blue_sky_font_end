@@ -5,11 +5,13 @@ import EveryPageHeroSection from '@/components/ui/EveryPageHeroSection';
 import MissionVision from '@/components/pages/home/MissionVission';
 import CoreValues from '@/components/pages/about/CoreValues';
 import StrategicGoals from '@/components/pages/about/StrategicGoals';
+import OurTeam from '@/components/pages/home/OurTeam';
 
 const AboutUs: FC = () => {
   return (
     <>
       <EveryPageHeroSection title="ABOUT US" imageUrl="/images/land3.jpg" />
+      <OurTeam/>
       <main className="bg-white text-gray-800">
         {/* Short History */}
         <section className="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">

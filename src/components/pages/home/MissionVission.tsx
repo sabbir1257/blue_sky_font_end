@@ -21,11 +21,11 @@ const MissionVision: React.FC = () => {
   return (
     <section className="py-24 px-6 bg-white">
       <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-    Our Mission and Vission
-                </h2>
-              <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
-            </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+          Our Mission
+        </h2>
+        <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
+      </div>
       <div className="max-w-7xl mx-auto space-y-24">
         {/* Mission Section */}
         <div className="md:flex md:gap-12 md:items-stretch">
@@ -46,13 +46,18 @@ const MissionVision: React.FC = () => {
           <div className="flex-1 bg-blue-50 rounded-2xl p-10 shadow-md flex flex-col justify-between">
             <div>
               <h2 className="text-3xl font-bold text-blue-800 mb-4">
-                “To develop smart, sustainable communities that offer a complete and modern urban living experience.”
+                “To develop smart, sustainable communities that offer a complete
+                and modern urban living experience.”
               </h2>
               <p className="text-gray-700 text-base md:text-lg mb-4">
-                At <strong>Blue Sky Dream City Ltd.</strong>, our mission is to create more than just housing—we aim to build integrated, livable communities near Dhaka that meet the needs of today and tomorrow.
+                At <strong>Blue Sky Dream City Ltd.</strong>, our mission is to
+                create more than just housing—we aim to build integrated,
+                livable communities near Dhaka that meet the needs of today and
+                tomorrow.
               </p>
               <p className="text-gray-700 text-base md:text-lg mb-6">
-                We strive to provide affordable, legally sound, and well-planned residential environments for families and investors alike.
+                We strive to provide affordable, legally sound, and well-planned
+                residential environments for families and investors alike.
               </p>
               <ul className="space-y-3">
                 {missionPoints.map((point, index) => (
@@ -62,7 +67,12 @@ const MissionVision: React.FC = () => {
             </div>
           </div>
         </div>
-
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+            Our Vission
+          </h2>
+          <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
+        </div>
         {/* Vision Section */}
         <div className="md:flex md:flex-row-reverse md:gap-12 md:items-stretch">
           {/* Image Right */}
@@ -82,13 +92,16 @@ const MissionVision: React.FC = () => {
           <div className="flex-1 bg-blue-50 rounded-2xl p-10 shadow-md flex flex-col justify-between">
             <div>
               <h2 className="text-3xl font-bold text-blue-800 mb-4">
-                “To become a model of future-ready residential development in Bangladesh, where life is secure, affordable, and fulfilling.”
+                “To become a model of future-ready residential development in
+                Bangladesh, where life is secure, affordable, and fulfilling.”
               </h2>
               <p className="text-gray-700 text-base md:text-lg mb-4">
-                We envision a new generation of satellite townships near Dhaka that integrate infrastructure, greenery, and technology.
+                We envision a new generation of satellite townships near Dhaka
+                that integrate infrastructure, greenery, and technology.
               </p>
               <p className="text-gray-700 text-base md:text-lg mb-6">
-                Our goal is to offer a modern alternative to the congestion of city life without compromising on access or amenities.
+                Our goal is to offer a modern alternative to the congestion of
+                city life without compromising on access or amenities.
               </p>
               <ul className="space-y-3">
                 {visionPoints.map((point, index) => (
