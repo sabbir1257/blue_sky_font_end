@@ -1,119 +1,113 @@
-'use client';
+import {
+  FaHome,
+  FaChartLine,
+  FaShieldAlt,
+  FaUsers,
+  FaCity,
+  FaBullhorn,
+  FaGlobe,
+} from 'react-icons/fa';
 
-import React from 'react';
-
-type Goal = {
-  icon: string;
-  title: string;
-  points: string[];
-};
-
-const goals: Goal[] = [
+const goals = [
   {
-    icon: '🏘️',
-    title: '1. Develop Model Residential Communities',
+    icon: <FaHome className="text-blue-600 text-3xl" />,
+    title: 'Develop Model Residential Communities',
     points: [
-      'Establish multiple integrated housing projects in key growth areas near Dhaka.',
-      'Focus on planned layouts with roads, utilities, parks, markets, and social infrastructure.',
-      'Incorporate eco-friendly features like green zones, water reservoirs, and waste management.',
+      'Establish integrated housing projects in key growth areas near Dhaka.',
+      'Design planned layouts with roads, utilities, parks, markets, and social facilities.',
+      'Include eco-friendly features like green zones, water reservoirs, and waste systems.',
     ],
   },
   {
-    icon: '📈',
-    title: '2. Deliver Sustainable Investment Growth',
+    icon: <FaChartLine className="text-green-600 text-3xl" />,
+    title: 'Deliver Sustainable Investment Growth',
     points: [
-      'Ensure land appreciation of 2–3x in 5–7 years through smart location selection.',
-      'Offer secure, high-return investment options for both residential buyers and institutional investors.',
-      'Create resale and rental value opportunities by maintaining demand through infrastructure and services.',
+      'Ensure land value appreciation of 2–3x in 5–7 years.',
+      'Provide high-return investment opportunities for individuals and institutions.',
+      'Strengthen resale and rental value through consistent infrastructure and service delivery.',
     ],
   },
   {
-    icon: '🛡️',
-    title: '3. Ensure 100% Legal and Transparent Transactions',
+    icon: <FaShieldAlt className="text-yellow-600 text-3xl" />,
+    title: 'Ensure 100% Legal and Transparent Transactions',
     points: [
-      'Maintain zero tolerance for irregular or unverified documentation.',
-      'Provide clients with complete legal support and due diligence for every transaction.',
-      'Build a reputation as one of the most trusted and legally compliant developers in Bangladesh.',
+      'Maintain strict compliance with all legal documentation standards.',
+      'Offer clients full legal support and due diligence services.',
+      'Build trust through transparency and verified legal processes.',
     ],
   },
   {
-    icon: '👪',
-    title: '4. Make Land Ownership Accessible',
+    icon: <FaUsers className="text-pink-600 text-3xl" />,
+    title: 'Make Land Ownership Accessible',
     points: [
-      'Offer affordable pricing models for middle-class and salaried individuals.',
-      'Introduce easy EMI plans, low down payments, and flexible financing.',
-      'Simplify the land purchase process with personalized guidance for first-time buyers.',
+      'Introduce affordable pricing plans for middle-class and salaried families.',
+      'Offer easy EMI plans, low down payments, and flexible financing options.',
+      'Simplify the land buying process for first-time buyers with personalized help.',
     ],
   },
   {
-    icon: '🌆',
-    title: '5. Become a Leader in Satellite Township Development',
+    icon: <FaCity className="text-purple-600 text-3xl" />,
+    title: 'Become a Leader in Satellite Township Development',
     points: [
-      'Pioneer the growth of future-ready suburbs with connectivity to Dhaka’s metro and highway networks.',
-      'Set a benchmark for township planning that balances growth, affordability, and liveability.',
-      'Launch mixed-use developments that include housing, education, healthcare, and commercial zones.',
+      'Lead the creation of future-ready suburbs with metro and highway connectivity.',
+      'Implement balanced township plans that blend affordability with livability.',
+      'Include mixed-use zones with housing, schools, healthcare, and businesses.',
     ],
   },
   {
-    icon: '📣',
-    title: '6. Build a Recognizable and Respected Brand',
+    icon: <FaBullhorn className="text-red-600 text-3xl" />,
+    title: 'Build a Recognizable and Respected Brand',
     points: [
-      'Establish Blue Sky Dream City Ltd. as a household name in real estate.',
-      'Develop a strong online and offline marketing presence to educate and attract clients.',
-      'Build client loyalty through consistent service, community events, and after-sale support.',
+      'Position Blue Sky Dream City Ltd. as a trusted real estate name.',
+      'Grow visibility through strong online and offline marketing.',
+      'Foster client loyalty via events, support services, and consistent communication.',
     ],
   },
   {
-    icon: '🌍',
-    title: '7. Contribute to National Urban Growth',
+    icon: <FaGlobe className="text-indigo-600 text-3xl" />,
+    title: 'Contribute to National Urban Growth',
     points: [
-      'Support the government’s “Smart Bangladesh” and urban decentralization goals.',
-      'Create employment opportunities through real estate, construction, and related sectors.',
-      'Promote responsible urbanization that respects nature, tradition, and the aspirations of modern citizens.',
+      "Support 'Smart Bangladesh' and regional development initiatives.",
+      'Create jobs in real estate, construction, and support services.',
+      'Promote modern, sustainable, and inclusive urban development.',
     ],
   },
 ];
 
-const StrategicGoals: React.FC = () => {
+export default function StrategicGoals() {
   return (
-    <section className="py-20 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-              Our Strategic Goals{' '}
-            </h2>
-            <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
-            <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">
-              At Blue Sky Dream City Ltd., our goals are not only about building
-              land and infrastructure—they’re about building trust, sustainable
-              communities, and a better future for our clients and the nation.
-            </p>
+    <section className="py-16 px-4 md:px-20 bg-gray-50">
+      <div className="text-center mb-12">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+            Our Strategic Goals{' '}
+          </h2>
+          <div className="w-20 h-1 mx-auto my-4 bg-blue-600 rounded-full"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            At Blue Sky Dream City Ltd., our mission goes beyond construction—we
+            aim to build lasting trust, sustainable growth, and empowered
+            communities.
+          </p>
+        </div>
+      </div>
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-[1200px] w-full mx-auto">
+        {goals.map((goal, index) => (
+          <div
+            key={index}
+            className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition duration-300 border border-gray-200 space-y-4"
+          >
+            <div className="flex justify-center">{goal.icon}</div>
+            <h3 className="text-xl font-semibold text-blue-800 text-center">
+              {goal.title}
+            </h3>
+            <ul className="text-gray-700 text-sm space-y-2 list-disc list-outside pl-5">
+              {goal.points.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-
-        <div className="grid gap-10 md:grid-cols-2">
-          {goals.map((goal, index) => (
-            <div
-              key={index}
-              className="bg-blue-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <h3 className="text-xl font-semibold text-blue-800">
-                  {goal.title}
-                </h3>
-              </div>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
-                {goal.points.map((point, idx) => (
-                  <li key={idx}>{point}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
     </section>
   );
-};
-
-export default StrategicGoals;
+}

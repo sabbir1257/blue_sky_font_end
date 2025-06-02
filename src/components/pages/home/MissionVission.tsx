@@ -65,11 +65,9 @@ const MissionVision: React.FC = () => {
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="my-16 border-t border-gray-300"></div>
 
       {/* Vision Section */}
-      <div className="text-center mb-12">
+      <div className="text-center my-12">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
           Our Vision
         </h2>

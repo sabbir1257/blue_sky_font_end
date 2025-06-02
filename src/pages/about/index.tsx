@@ -5,7 +5,6 @@ import EveryPageHeroSection from '@/components/ui/EveryPageHeroSection';
 import MissionVision from '@/components/pages/home/MissionVission';
 import CoreValues from '@/components/pages/about/CoreValues';
 import StrategicGoals from '@/components/pages/about/StrategicGoals';
-import OurTeam from '@/components/pages/home/OurTeam';
 
 const AboutUs: FC = () => {
   return (
@@ -46,12 +45,8 @@ const AboutUs: FC = () => {
             </Link>
           </div>
         </section>
-        {/*  our team  */}
-        <OurTeam />
-        {/* Company Values */}
-        <CoreValues />
-        {/* missions and visions */}
         <MissionVision />
+        <CoreValues />
         <StrategicGoals />
       </main>
     </>
