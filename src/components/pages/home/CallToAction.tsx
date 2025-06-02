@@ -33,7 +33,7 @@ const CallToAction: React.FC = () => {
         {/* Email input form */}
         <form
           onSubmit={handleSubmit}
-          className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xl mx-auto"
+          className="mt-10 flex flex-row justify-center items-center gap-4 max-w-xl mx-auto"
         >
           <input
             type="email"
@@ -41,11 +41,11 @@ const CallToAction: React.FC = () => {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full sm:flex-1 px-5 py-3 rounded-full text-blue-900 border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full md:flex-1 px-5 py-3 rounded-full text-blue-900 border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
             type="submit"
-            className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition duration-300"
+            className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition duration-300 text-sm "
           >
             Submit
           </button>

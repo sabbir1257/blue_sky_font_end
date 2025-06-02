@@ -6,7 +6,7 @@ const businesses = [
     title: "Blue Sky Dream Hotel and Resorts",
     description:
       "We help clients identify, acquire, and develop properties tailored to their goals. From urban planning to final delivery, we manage the full lifecycle.",
-    image: "/images/land.jpg",
+    image: "/images/gallery2.webp",
     points: [
       "Full property lifecycle management",
       "Zoning and permit handling",
@@ -17,7 +17,7 @@ const businesses = [
     title: "Blue Sky Dream Society",
     description:
       "Maximize returns with expert insights on real estate trends, risks, and capital allocation. We help you build a sustainable investment portfolio.",
-    image: "/images/land.jpg",
+    image: "/images/gallery4.webp",
     points: [
       "Market trend analysis",
       "Capital allocation strategies",
