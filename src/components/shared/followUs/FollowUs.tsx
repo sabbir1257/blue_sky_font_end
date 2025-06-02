@@ -1,140 +1,133 @@
-"use client"
-import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon, YoutubeIcon } from '@/components/Icons/Icons'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import React, { useRef } from 'react'
-import { Autoplay } from 'swiper/modules';
+"use client";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "@/components/Icons/Icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import React, { useRef } from "react";
+import { Autoplay } from "swiper/modules";
+
+// Social platforms data
+const platforms = [
+  {
+    name: "Blue Sky City",
+    url: "https://www.facebook.com/usppllc",
+    Icon: FacebookIcon,
+    size: "text-4xl",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/usppllc",
+    Icon: InstagramIcon,
+    size: "text-3xl",
+  },
+  {
+    name: "Youtube",
+    url: "https://www.youtube.com/@usppllc",
+    Icon: YoutubeIcon,
+    size: "text-4xl",
+  },
+  {
+    name: "Twitter",
+    url: "https://x.com/usppllc",
+    Icon: TwitterIcon,
+    size: "text-3xl",
+  },
+  {
+    name: "Linkedin",
+    url: "https://www.linkedin.com/company/usppllc",
+    Icon: LinkedinIcon,
+    size: "text-4xl",
+  },
+];
 
 const FlowUsSection = () => {
-   const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<any>(null);
 
-   const handleMouseEnter = () => {
-      if (swiperRef.current) {
-         swiperRef.current.autoplay.stop(); // Stop autoplay on mouse enter
-      }
-   };
+  // Function to get hover color class based on platform name
+  const getHoverColorClass = (name: string) => {
+    switch (name) {
+      case "Blue Sky City":
+        return "group-hover:text-blue-600";
+      case "Instagram":
+        return "group-hover:text-pink-500";
+      case "Youtube":
+        return "group-hover:text-red-600";
+      case "Twitter":
+        return "group-hover:text-sky-500";
+      case "Linkedin":
+        return "group-hover:text-blue-700";
+      default:
+        return "";
+    }
+  };
 
-   const handleMouseLeave = () => {
-      if (swiperRef.current) {
-         swiperRef.current.autoplay.start(); // Restart autoplay on mouse leave
-      }
-   };
-
-   return (
-      <>
-         <div className="hidden lg:block my-10">
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 w-[80%] mx-auto">
-               <a
-                  href="https://www.facebook.com/usppllc"
-                  className="bg-white py-8 rounded-2xl drop-shadow-2xl h-[150px] w-full flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out"
-               >
-                  <div className="text-4xl drop-shadow-lg">
-                     <FacebookIcon />
-                  </div>
-                  <h5 className="font-semibold pt-4 italic">Blue Sky City</h5>
-               </a>
-
-               <a
-                  href="https://www.instagram.com/usppllc"
-                  className="bg-white py-8 rounded-2xl drop-shadow-2xl h-[150px] w-full flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out"
-               >
-                  <div className="text-3xl">
-                     <InstagramIcon />
-                  </div>
-                  <h5 className="font-semibold pt-4 italic">Instagram</h5>
-               </a>
-
-               <a
-                  href="https://www.youtube.com/@usppllc"
-                  className="bg-white py-8 rounded-2xl drop-shadow-2xl h-[150px] w-full flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out"
-               >
-                  <div className="text-4xl">
-                     <YoutubeIcon />
-                  </div>
-                  <h5 className="font-semibold pt-4 italic">Youtube</h5>
-               </a>
-
-               <a
-                  href="https://x.com/usppllc"
-                  className="bg-white py-8 rounded-2xl drop-shadow-2xl h-[150px] w-full flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out"
-               >
-                  <div className="text-3xl">
-                     <TwitterIcon />
-                  </div>
-                  <h5 className="font-semibold pt-4 italic">Twitter</h5>
-               </a>
-
-               <a
-                  href="https://www.linkedin.com/company/usppllc"
-                  className="bg-white py-8 rounded-2xl drop-shadow-2xl h-[150px] w-full flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out"
-               >
-                  <div className="text-4xl">
-                     <LinkedinIcon />
-                  </div>
-                  <h5 className="font-semibold pt-4 italic">Linkedin</h5>
-               </a>
-            </div>
-         </div>
-
-         <div className='lg:hidden'>
-            <Swiper
-               onSwiper={(swiper: any) => {
-                  swiperRef.current = swiper;
-               }}
-               autoplay={{
-                  delay: 500,
-                  disableOnInteraction: false,
-               }}
-               speed={1500}
-               pagination={{
-                  clickable: true,
-               }}
-               modules={[Autoplay]}
-               spaceBetween={10}
-               slidesPerView={2}
-               loop={true}
-               breakpoints={{
-                  768: { slidesPerView: 2 },
-                  1024: { slidesPerView: 3 },
-               }}
-               className="mySwiper"
+  return (
+    <>
+      {/* Desktop view */}
+      <div className="hidden lg:block my-10">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 w-[80%] mx-auto">
+          {platforms.map(({ name, url, Icon, size }, index) => (
+            <a
+              key={index}
+              href={url}
+              className="group bg-white py-8 rounded-2xl drop-shadow-2xl h-[150px] w-full flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out"
             >
-               <SwiperSlide className="pb-20 pt-5">
-                  <a href={'https://www.facebook.com/usppllc'} className='bg-white py-8 rounded-2xl drop-shadow-xl h-[150px] w-full flex flex-col justify-center items-center'>
-                     <div className=' text-4xl drop-shadow-lg '> <FacebookIcon /></div>
-                     <h5 className='font-semibold pt-4 italic'>Blue Sky city</h5>
-                  </a>
-               </SwiperSlide>
-               <SwiperSlide className="pb-20 pt-5">
-                  <a href={'https://www.instagram.com/usppllc'} className='bg-white py-8 rounded-2xl drop-shadow-xl h-[150px] w-full flex flex-col justify-center items-center'>
-                     <div className=' text-3xl'> <InstagramIcon /></div>
-                     <h5 className='font-semibold pt-4 italic'>Instagram</h5>
-                  </a>
-               </SwiperSlide>
-               <SwiperSlide className="pb-20 pt-5">
-                  <a href={'https://www.youtube.com/@usppllc'} className='bg-white py-8 rounded-2xl drop-shadow-xl h-[150px] w-full flex flex-col justify-center items-center'>
-                     <div className=' text-4xl'> <YoutubeIcon /></div>
-                     <h5 className='font-semibold pt-4 italic'>Youtube</h5>
-                  </a>
-               </SwiperSlide>
-               <SwiperSlide className="pb-20 pt-5">
-                  <a href={'https://x.com/usppllc'} className='bg-white py-8 rounded-2xl drop-shadow-xl h-[150px] w-full flex flex-col justify-center items-center'>
-                     <div className=' text-3xl'> <TwitterIcon /></div>
-                     <h5 className='font-semibold pt-4 italic'>Twitter</h5>
-                  </a>
-               </SwiperSlide>
-               <SwiperSlide className="pb-20 pt-5">
-                  <a href={'https://www.linkedin.com/company/usppllc'} className='bg-white py-8 rounded-2xl drop-shadow-xl h-[150px] w-full flex flex-col justify-center items-center'>
-                     <div className=' text-4xl'> <LinkedinIcon /></div>
-                     <h5 className='font-semibold pt-4 italic'>Linkedin</h5>
-                  </a>
-               </SwiperSlide>
-            </Swiper>
-         </div>
-      </>
-   )
-}
+              <div
+                className={`${size} drop-shadow-lg transition duration-300 ${getHoverColorClass(
+                  name
+                )}`}
+              >
+                <Icon />
+              </div>
+              <h5 className="font-semibold pt-4 italic">{name}</h5>
+            </a>
+          ))}
+        </div>
+      </div>
 
-export default FlowUsSection
+      {/* Mobile swiper view */}
+      <div className="lg:hidden">
+        <Swiper
+          onSwiper={(swiper: any) => {
+            swiperRef.current = swiper;
+          }}
+          autoplay={{
+            delay: 500,
+            disableOnInteraction: false,
+          }}
+          speed={1500}
+          loop={true}
+          spaceBetween={10}
+          slidesPerView={2}
+          modules={[Autoplay]}
+          className="mySwiper"
+        >
+          {platforms.map(({ name, url, Icon, size }, index) => (
+            <SwiperSlide key={index} className="pb-20 pt-5">
+              <a
+                href={url}
+                className="group bg-white py-8 rounded-2xl drop-shadow-xl h-[150px] w-full flex flex-col justify-center items-center"
+              >
+                <div
+                  className={`${size} drop-shadow-lg transition duration-300 ${getHoverColorClass(
+                    name
+                  )}`}
+                >
+                  <Icon />
+                </div>
+                <h5 className="font-semibold pt-4 italic">{name}</h5>
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </>
+  );
+};
 
-
+export default FlowUsSection;
