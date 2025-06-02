@@ -20,95 +20,93 @@ const MissionVision: React.FC = () => {
 
   return (
     <section className="py-24 px-6 bg-white">
+      {/* Mission Section */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
           Our Mission
         </h2>
         <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
       </div>
-      <div className="max-w-7xl mx-auto space-y-24">
-        {/* Mission Section */}
-        <div className="md:flex md:gap-12 md:items-stretch">
-          {/* Image Left */}
-          <div className="hidden md:block flex-1">
-            <div className="h-full rounded-2xl overflow-hidden shadow-md">
-              <Image
-                src="/images/land1.jpg"
-                alt="Mission"
-                width={800}
-                height={600}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
+      <div className="max-w-7xl mx-auto md:flex md:gap-12 md:items-stretch bg-blue-50 rounded-2xl p-6 shadow-md">
+        {/* Image Left */}
+        <div className="flex-1 rounded-2xl overflow-hidden shadow-md">
+          <Image
+            src="/images/land1.jpg"
+            alt="Mission"
+            width={800}
+            height={600}
+            className="object-cover w-full h-full"
+          />
+        </div>
 
-          {/* Text Right */}
-          <div className="flex-1 bg-blue-50 rounded-2xl p-10 shadow-md flex flex-col justify-between">
-            <div>
-              <h2 className="text-3xl font-bold text-blue-800 mb-4">
-                “To develop smart, sustainable communities that offer a complete
-                and modern urban living experience.”
-              </h2>
-              <p className="text-gray-700 text-base md:text-lg mb-4">
-                At <strong>Blue Sky Dream City Ltd.</strong>, our mission is to
-                create more than just housing—we aim to build integrated,
-                livable communities near Dhaka that meet the needs of today and
-                tomorrow.
-              </p>
-              <p className="text-gray-700 text-base md:text-lg mb-6">
-                We strive to provide affordable, legally sound, and well-planned
-                residential environments for families and investors alike.
-              </p>
-              <ul className="space-y-3">
-                {missionPoints.map((point, index) => (
-                  <FeatureItem key={index} text={point} />
-                ))}
-              </ul>
-            </div>
+        {/* Text Right */}
+        <div className="flex-1 p-8 flex flex-col justify-between">
+          <div>
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">
+              “To develop smart, sustainable communities that offer a complete
+              and modern urban living experience.”
+            </h2>
+            <p className="text-gray-700 text-base md:text-lg mb-4">
+              At <strong>Blue Sky Dream City Ltd.</strong>, our mission is to
+              create more than just housing—we aim to build integrated,
+              livable communities near Dhaka that meet the needs of today and
+              tomorrow.
+            </p>
+            <p className="text-gray-700 text-base md:text-lg mb-6">
+              We strive to provide affordable, legally sound, and well-planned
+              residential environments for families and investors alike.
+            </p>
+            <ul className="space-y-3">
+              {missionPoints.map((point, index) => (
+                <FeatureItem key={index} text={point} />
+              ))}
+            </ul>
           </div>
         </div>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
-            Our Vission
-          </h2>
-          <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
-        </div>
-        {/* Vision Section */}
-        <div className="md:flex md:flex-row-reverse md:gap-12 md:items-stretch">
-          {/* Image Right */}
-          <div className="hidden md:block flex-1">
-            <div className="h-full rounded-2xl overflow-hidden shadow-md">
-              <Image
-                src="/images/land1.jpg"
-                alt="Vision"
-                width={800}
-                height={600}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
+      </div>
 
-          {/* Text Left */}
-          <div className="flex-1 bg-blue-50 rounded-2xl p-10 shadow-md flex flex-col justify-between">
-            <div>
-              <h2 className="text-3xl font-bold text-blue-800 mb-4">
-                “To become a model of future-ready residential development in
-                Bangladesh, where life is secure, affordable, and fulfilling.”
-              </h2>
-              <p className="text-gray-700 text-base md:text-lg mb-4">
-                We envision a new generation of satellite townships near Dhaka
-                that integrate infrastructure, greenery, and technology.
-              </p>
-              <p className="text-gray-700 text-base md:text-lg mb-6">
-                Our goal is to offer a modern alternative to the congestion of
-                city life without compromising on access or amenities.
-              </p>
-              <ul className="space-y-3">
-                {visionPoints.map((point, index) => (
-                  <FeatureItem key={index} text={point} />
-                ))}
-              </ul>
-            </div>
+      {/* Divider */}
+      <div className="my-16 border-t border-gray-300"></div>
+
+      {/* Vision Section */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+          Our Vision
+        </h2>
+        <div className="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded-full"></div>
+      </div>
+      <div className="max-w-7xl mx-auto md:flex md:flex-row-reverse md:gap-12 md:items-stretch bg-blue-100 rounded-2xl p-6 shadow-md">
+        {/* Image Right */}
+        <div className="flex-1 rounded-2xl overflow-hidden shadow-md">
+          <Image
+            src="/images/land1.jpg"
+            alt="Vision"
+            width={800}
+            height={600}
+            className="object-cover w-full h-full"
+          />
+        </div>
+
+        {/* Text Left */}
+        <div className="flex-1 p-8 flex flex-col justify-between">
+          <div>
+            <h2 className="text-3xl font-bold text-blue-800 mb-4">
+              “To become a model of future-ready residential development in
+              Bangladesh, where life is secure, affordable, and fulfilling.”
+            </h2>
+            <p className="text-gray-700 text-base md:text-lg mb-4">
+              We envision a new generation of satellite townships near Dhaka
+              that integrate infrastructure, greenery, and technology.
+            </p>
+            <p className="text-gray-700 text-base md:text-lg mb-6">
+              Our goal is to offer a modern alternative to the congestion of
+              city life without compromising on access or amenities.
+            </p>
+            <ul className="space-y-3">
+              {visionPoints.map((point, index) => (
+                <FeatureItem key={index} text={point} />
+              ))}
+            </ul>
           </div>
         </div>
       </div>

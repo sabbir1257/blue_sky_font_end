@@ -99,7 +99,6 @@ const StrategicGoals: React.FC = () => {
               className="bg-blue-50 p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300"
             >
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-3xl">{goal.icon}</span>
                 <h3 className="text-xl font-semibold text-blue-800">
                   {goal.title}
                 </h3>

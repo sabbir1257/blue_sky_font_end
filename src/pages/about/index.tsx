@@ -11,7 +11,6 @@ const AboutUs: FC = () => {
   return (
     <>
       <EveryPageHeroSection title="ABOUT US" imageUrl="/images/land3.jpg" />
-      <OurTeam/>
       <main className="bg-white text-gray-800">
         {/* Short History */}
         <section className="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -47,7 +46,8 @@ const AboutUs: FC = () => {
             </Link>
           </div>
         </section>
-
+        {/*  our team  */}
+        <OurTeam />
         {/* Company Values */}
         <CoreValues />
         {/* missions and visions */}
