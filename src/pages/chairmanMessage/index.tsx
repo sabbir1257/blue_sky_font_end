@@ -17,7 +17,7 @@ const ChairmanMessage = () => {
             <h1 className="text-2xl font-bold lg:text-4xl mt-6">
               Md Miraz Hossain Ovi
             </h1>
-            <h3 className="text-xl lg:text-2xl text-[#1e3a99] font-semibold uppercase tracking-wide mt-2">
+            <h3 className="text-xl lg:text-xl text-[#1e3a99] font-semibold uppercase tracking-wide mt-2">
               Chairman
             </h3>
           </div>
