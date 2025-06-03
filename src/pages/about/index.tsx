@@ -1,15 +1,33 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import EveryPageHeroSection from '@/components/ui/EveryPageHeroSection';
 import MissionVision from '@/components/pages/home/MissionVission';
 import CoreValues from '@/components/pages/about/CoreValues';
 import StrategicGoals from '@/components/pages/about/StrategicGoals';
+import HeroSlider from '@/components/shared/HeroSlider';
+
+const heroSlides = [
+  {
+    image: "/images/landing.jpg",
+  },
+  {
+    image: "/images/landing.jpg",
+  },
+  {
+    image: "/images/landing.jpg",
+  },
+];
 
 const AboutUs: FC = () => {
   return (
     <>
-      <EveryPageHeroSection title="ABOUT US" imageUrl="/images/land3.jpg" />
+      {/* <EveryPageHeroSection title="ABOUT US" imageUrl="/images/land3.jpg" /> */}
+      {/* <Slider slides={slideData}/> */}
+      <HeroSlider
+      slides={heroSlides}
+      heightClass="h-[70vh] md:h-[80vh] lg:h-[100vh]"
+      widthClass="w-full"
+    />
       <main className="bg-white text-gray-800">
         {/* Short History */}
         <section className="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">

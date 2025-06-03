@@ -27,7 +27,7 @@ const Navbar = () => {
       <NavTop />
 
       {/* main section of navbar */}
-      <nav className="text-white bg-blue-900 px-5 md:px-10 md:py-5 py-4 rounded-sm flex justify-between relative z-[999]">
+      <nav className="text-white bg-blue-900 px-5 md:px-10 md:py-5 py-4 rounded-xl flex justify-between relative z-[999]">
         <div className="hidden md:block">
           <ul className="text-gray-300 flex gap-6 text-lg">
             {navLinks?.map((link: TNavLinks, i: number) => {
