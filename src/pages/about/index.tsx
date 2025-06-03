@@ -8,13 +8,13 @@ import HeroSlider from '@/components/shared/HeroSlider';
 
 const heroSlides = [
   {
-    image: "/images/landing.jpg",
+    image: '/images/landing.jpg',
   },
   {
-    image: "/images/landing.jpg",
+    image: '/images/landing.jpg',
   },
   {
-    image: "/images/landing.jpg",
+    image: '/images/landing.jpg',
   },
 ];
 
@@ -24,20 +24,18 @@ const AboutUs: FC = () => {
       {/* <EveryPageHeroSection title="ABOUT US" imageUrl="/images/land3.jpg" /> */}
       {/* <Slider slides={slideData}/> */}
       <HeroSlider
-      slides={heroSlides}
-      heightClass="h-[70vh] md:h-[80vh] lg:h-[100vh]"
-      widthClass="w-full"
-    />
+        slides={heroSlides}
+        heightClass="h-[70vh] md:h-[80vh] lg:h-[100vh]"
+        widthClass="w-full"
+      />
       <main className="bg-white text-gray-800">
         {/* Short History */}
         <section className="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <Image
-              src="/images/land3.jpg"
-              alt="Company History"
-              width={600}
-              height={400}
-              className="rounded-xl"
+            <HeroSlider
+              slides={heroSlides}
+              heightClass="h-full"
+              widthClass="w-full"
             />
           </div>
           <div>

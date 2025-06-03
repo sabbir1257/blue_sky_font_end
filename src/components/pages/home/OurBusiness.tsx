@@ -48,7 +48,7 @@ const OurBusiness = () => {
             <img
               src={biz.image}
               alt={biz.title}
-              className="w-full md:w-1/2 h-82 object-cover rounded-lg shadow"
+  className="w-full md:w-1/2 h-82 object-cover rounded-lg shadow transform transition duration-500 hover:scale-105"
             />
             <div className="md:w-1/2">
               <h3 className="text-2xl font-semibold text-blue-800">{biz.title}</h3>
