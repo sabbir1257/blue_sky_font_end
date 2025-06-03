@@ -24,7 +24,6 @@ export const navLinks: TNavLinks[] = [
       },
       {
         name: 'Managing directing message',
-        // dynamic path
         path: '/chairmanMessage#managingDirector',
       },
       {
