@@ -32,11 +32,11 @@ export const navLinks: TNavLinks[] = [
       },
       {
         name: 'Executive team',
-        path: '/executiveTeam',
+        path: '/boardOfDirector#executiveTeam',
       },
       {
         name: 'Share holders',
-        path: '/shareHolders',
+        path: '/boardOfDirector#shareHolders',
       },
       {
         name: 'Membership and certificate',
