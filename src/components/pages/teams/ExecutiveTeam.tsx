@@ -29,7 +29,7 @@ const executiveMembers = [
 const ExecutiveTeam = () => {
   return (
     <Container>
-      <div className="py-16 bg-gray-50 text-gray-900">
+      <div className="py-16  text-gray-900">
         <div className="text-center my-12">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
             Executive Team
