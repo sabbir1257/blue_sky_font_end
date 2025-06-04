@@ -62,7 +62,7 @@ export const navLinks: TNavLinks[] = [
       },
       {
         name: 'Blue Sky Condominium',
-        path: 'project/blueSkyCondominium',
+        path: '/project/blueSkyCondominium',
       },
     ],
   },
@@ -72,11 +72,11 @@ export const navLinks: TNavLinks[] = [
     children: [
       {
         name: 'Blue Sky Dream Hotel and Resorts',
-        path: '/business/blyeSkyDreamHotelAndResorts',
+        path: '/blyeSkyDreamHotelAndResorts',
       },
       {
         name: 'Blue Sky Dream Society',
-        path: '/business/blyeSkyDreamSociety',
+        path: '/blyeSkyDreamSociety',
       },
     ],
   },
