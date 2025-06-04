@@ -2,7 +2,6 @@ import Container from '@/components/ui/Container';
 import Image from 'next/image';
 import React from 'react';
 
-// Dynamic data for the Executive Team
 const executiveMembers = [
   {
     name: 'John Doe',
@@ -12,17 +11,17 @@ const executiveMembers = [
   {
     name: 'Jane Smith',
     position: 'CTO',
-    image: '/images/man1.jpg',
+    image: '/images/Managing-directing.jpeg',
   },
   {
     name: 'David Johnson',
     position: 'CFO',
-    image: '/images/man1.jpg',
+    image: '/images/Managing-directing.jpeg',
   },
   {
     name: 'Emily Davis',
     position: 'COO',
-    image: '/images/man1.jpg',
+    image: '/images/Managing-directing.jpeg',
   },
 ];
 

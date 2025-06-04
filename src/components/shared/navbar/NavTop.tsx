@@ -32,7 +32,7 @@ const NavTop = () => {
                             {/* <Image width={300} height={300} src={'/images/logo/logo.png'} alt='logo'/> */}
                         </div>
                        <Link href={'/contact'}>
-                        <Button className='border rounded-md shadow-md'>Contact Now</Button>
+                        <Button className='border border-indigo-600 rounded-md shadow-md'>Contact Now</Button>
                        </Link>
                     </div>
                 </div>

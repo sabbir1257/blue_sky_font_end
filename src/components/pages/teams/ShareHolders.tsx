@@ -2,7 +2,6 @@ import Container from '@/components/ui/Container';
 import Image from 'next/image';
 import React from 'react';
 
-// Dynamic data for shareholders
 const shareHolders = [
   {
     name: 'John Doe',
@@ -12,25 +11,25 @@ const shareHolders = [
   {
     name: 'Jane Smith',
     position: 'CTO',
-    image: '/images/man1.jpg',
+    image: '/images/Managing-directing.jpeg',
   },
   {
     name: 'David Johnson',
     position: 'CFO',
-    image: '/images/man1.jpg',
+    image: '/images/Managing-directing.jpeg',
   },
   {
     name: 'Emily Davis',
     position: 'COO',
-    image: '/images/man1.jpg',
+    image: '/images/Managing-directing.jpeg',
   },
 ];
 
 const ShareHolders = () => {
   return (
     <Container>
-      <div className="py-16  text-gray-900">
-        <div className="text-center my-12">
+      <div className="py-6  text-gray-900">
+        <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
           Our Share Holders
         </h2>
